@@ -1,0 +1,57 @@
+.tooltip {
+  position: absolute;
+  z-index: 9;
+  --tooltip-bg: hsl(207, 12%, 13%);
+  --tooltip-border: 1px solid hsl(194, 14%, 24%);
+  --arrow-size: 12px;
+}
+
+.tooltip_content {
+  max-width: 500px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-size: 1.4rem;
+  border: var(--tooltip-border);
+  border-radius: 15px;
+  box-shadow: 0px 6px 28px hsla(193, 22%, 55%, 0.2);
+  background-color: var(--tooltip-bg);
+  /* Margin bottom is used for calculating the height of the tooltip
+  prior to choose the value of 'data-placement' */
+  margin-bottom: var(--arrow-size);
+}
+
+.tooltip-out-of-screen {
+  transform: translate(-5000px, -5000px);
+  visibility: hidden;
+}
+
+/* ----- Arrow styles ----- */
+.tooltip_arrow {
+  position: absolute;
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  border-left: var(--tooltip-border);
+  border-bottom: var(--tooltip-border);
+  background: var(--tooltip-bg);
+}
+
+.tooltip[data-placement="top"] {
+  margin-bottom: var(--arrow-size);
+}
+
+.tooltip[data-placement="top"] > .tooltip_arrow {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+.tooltip[data-placement="bottom"] {
+  padding-top: var(--arrow-size);
+}
+
+.tooltip[data-placement="bottom"] > .tooltip_arrow {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%) rotate(135deg);
+}

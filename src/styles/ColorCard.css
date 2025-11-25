@@ -1,0 +1,464 @@
+.color-card {
+  --card-accent: magenta;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid var(--card-accent);
+  color: var(--card-accent);
+  background-color: var(--card-accent);
+}
+
+.color-card-normal {
+  width: 100%;
+  max-width: 200px;
+  min-height: 240px;
+}
+
+.color-card-expert {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+}
+
+.color-card_content {
+  position: absolute;
+  bottom: 0%;
+  z-index: 1;
+  width: 100%;
+  padding: 18px;
+  background-color: black;
+}
+
+/* -------- Effect on hover -------- */
+.color-card_content,
+.color-card::before {
+  transition-property: top, bottom, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.color-card::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.color-card:hover::before {
+  top: 50%;
+}
+
+.color-card:hover > .color-card_content {
+  bottom: 50%;
+  transform: translateY(100%);
+}
+
+/* -------- Appear / disappear transition -------- */
+.color-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  transition: 0.4s top ease;
+  top: 0%;
+}
+
+.color-card.color-card-enter-active::after,
+.color-card-enter-done::after {
+  top: -100%;
+}
+
+.color-card.color-card-exit::after {
+  top: 0%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .color-card-expert {
+    width: 150px;
+    height: 150px;
+  }
+
+  .color-card-normal {
+    max-width: 200px;
+    min-height: 200px;
+  }
+
+  .color-card_content {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .color-card-normal {
+    max-width: 190px;
+    min-height: 150px;
+  }
+
+  .color-card-expert {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* -------- Individual color styles -------- */
+.color-card.pink-lavender {
+  --card-accent: hsl(339, 30%, 73%);
+  --shadow-color: 339, 30%, 73%;
+}
+
+.color-card.african-violet {
+  --card-accent: hsl(315, 36%, 67%);
+  --shadow-color: 315, 36%, 67%;
+}
+
+.color-card.desert-sand {
+  --card-accent: hsl(24, 79%, 85%);
+  --shadow-color: 24, 79%, 85%;
+}
+
+.color-card.bittersweet {
+  --card-accent: hsl(1, 100%, 69%);
+  --shadow-color: 1, 100%, 69%;
+}
+
+.color-card.chartreuse {
+  --card-accent: hsl(71, 100%, 65%);
+  --shadow-color: 71, 100%, 65%;
+}
+
+.color-card.razzle-dazzle {
+  --card-accent: hsl(315, 100%, 59%);
+  --shadow-color: 315, 100%, 59%;
+}
+
+.color-card.earth-yellow {
+  --card-accent: hsl(35, 82%, 71%);
+  --shadow-color: 35, 82%, 71%;
+}
+
+.color-card.giants-range {
+  --card-accent: hsl(15, 99%, 57%);
+  --shadow-color: 15, 99%, 57%;
+}
+
+.color-card.emerald {
+  --card-accent: hsl(131, 32%, 62%);
+  --shadow-color: 131, 32%, 62%;
+}
+
+.color-card.tea-green {
+  --card-accent: hsl(99, 36%, 78%);
+  --shadow-color: 99, 36%, 78%;
+}
+
+.color-card.blue-ncs {
+  --card-accent: hsl(195, 83%, 38%);
+  --shadow-color: 195, 83%, 38%;
+}
+
+.color-card.pomp-and-power {
+  --card-accent: hsl(280, 22%, 52%);
+  --shadow-color: 280, 22%, 52%;
+}
+
+.color-card.moonstone {
+  --card-accent: hsl(188, 36%, 52%);
+  --shadow-color: 188, 36%, 52%;
+}
+
+.color-card.amber {
+  --card-accent: hsl(46, 96%, 48%);
+  --shadow-color: 46, 96%, 48%;
+}
+
+.color-card.red-orange {
+  --card-accent: hsl(20, 92%, 44%);
+  --shadow-color: 20, 92%, 44%;
+}
+
+.color-card.purpureus {
+  --card-accent: hsl(279, 45%, 51%);
+  --shadow-color: 279, 45%, 51%;
+}
+
+.color-card.lilac {
+  --card-accent: hsl(310, 36%, 69%);
+  --shadow-color: 310, 36%, 69%;
+}
+
+.color-card.apple-green {
+  --card-accent: hsl(85, 72%, 40%);
+  --shadow-color: 85, 72%, 40%;
+}
+
+.color-card.yellow-green {
+  --card-accent: hsl(76, 96%, 41%);
+  --shadow-color: 76, 96%, 41%;
+}
+
+.color-card.persimmon {
+  --card-accent: hsl(23, 99%, 48%);
+  --shadow-color: 23, 99%, 48%;
+}
+
+.color-card.steel-blue {
+  --card-accent: hsl(211, 65%, 50%);
+  --shadow-color: 211, 65%, 50%;
+}
+
+.color-card.grape {
+  --card-accent: hsl(280, 55%, 44%);
+  --shadow-color: 280, 55%, 44%;
+}
+
+.color-card.cerulean {
+  --card-accent: hsl(196, 91%, 34%);
+  --shadow-color: 196, 91%, 34%;
+}
+
+.color-card.picton-blue {
+  --card-accent: hsl(196, 91%, 44%);
+  --shadow-color: 196, 91%, 44%;
+}
+
+.color-card.deep-sky-blue {
+  --card-accent: hsl(196, 91%, 54%);
+  --shadow-color: 196, 91%, 54%;
+}
+
+.color-card.aero {
+  --card-accent: hsl(192, 96%, 44%);
+  --shadow-color: 192, 96%, 44%;
+}
+
+.color-card.orange-wheel {
+  --card-accent: hsl(29, 100%, 50%);
+  --shadow-color: 29, 100%, 50%;
+}
+
+.color-card.quinacridone-magenta {
+  --card-accent: hsl(339, 53%, 37%);
+  --shadow-color: 339, 53%, 37%;
+}
+
+.color-card.mindaro {
+  --card-accent: hsl(76, 60%, 76%);
+  --shadow-color: 76, 60%, 76%;
+}
+
+.color-card.asparagus {
+  --card-accent: hsl(89, 47%, 40%);
+  --shadow-color: 89, 47%, 40%;
+}
+
+.color-card.persian-pink {
+  --card-accent: hsl(323, 74%, 70%);
+  --shadow-color: 323, 74%, 70%;
+}
+
+.color-card.redwood {
+  --card-accent: hsl(11, 29%, 52%);
+  --shadow-color: 11, 29%, 52%;
+}
+
+.color-card.icterine {
+  --card-accent: hsl(58, 84%, 64%);
+  --shadow-color: 58, 84%, 64%;
+}
+
+.color-card.madder {
+  --card-accent: hsl(351, 71%, 38%);
+  --shadow-color: 351, 71%, 38%;
+}
+
+.color-card.cardinal {
+  --card-accent: hsl(354, 71%, 45%);
+  --shadow-color: 354, 71%, 45%;
+}
+
+.color-card.auburn {
+  --card-accent: hsl(354, 53%, 43%);
+  --shadow-color: 354, 53%, 43%;
+}
+
+.color-card.red-pantone {
+  --card-accent: hsl(351, 90%, 50%);
+  --shadow-color: 351, 90%, 50%;
+}
+
+.color-card.red-munsell {
+  --card-accent: hsl(351, 83%, 53%);
+  --shadow-color: 351, 83%, 53%;
+}
+
+.color-card.amaranth {
+  --card-accent: hsl(351, 76%, 57%);
+  --shadow-color: 351, 76%, 57%;
+}
+
+.color-card.safety-orange {
+  --card-accent: hsl(29, 96%, 47%);
+  --shadow-color: 29, 96%, 47%;
+}
+
+.color-card.carrot-orange {
+  --card-accent: hsl(37, 96%, 46%);
+  --shadow-color: 37, 96%, 46%;
+}
+
+.color-card.syracuse-red-orange {
+  --card-accent: hsl(20, 95%, 43%);
+  --shadow-color: 20, 95%, 43%;
+}
+
+.color-card.scarlet {
+  --card-accent: hsl(10, 98%, 48%);
+  --shadow-color: 10, 98%, 48%;
+}
+
+.color-card.chili-red {
+  --card-accent: hsl(3, 98%, 46%);
+  --shadow-color: 3, 98%, 46%;
+}
+
+.color-card.violet {
+  --card-accent: hsl(291, 95%, 75%);
+  --shadow-color: 291, 95%, 75%;
+}
+
+.color-card.tiffany-blue {
+  --card-accent: hsl(166, 42%, 74%);
+  --shadow-color: 166, 42%, 74%;
+}
+
+.color-card.sandy-brown {
+  --card-accent: hsl(29, 84%, 63%);
+  --shadow-color: 29, 84%, 63%;
+}
+
+.color-card.tangerine {
+  --card-accent: hsl(29, 78%, 53%);
+  --shadow-color: 29, 78%, 53%;
+}
+
+.color-card.tang-blue {
+  --card-accent: hsl(219, 73%, 48%);
+  --shadow-color: 219, 73%, 48%;
+}
+
+.color-card.aqua {
+  --card-accent: hsl(183, 100%, 52%);
+  --shadow-color: 183, 100%, 52%;
+}
+
+.color-card.electric-violet {
+  --card-accent: hsl(271, 100%, 52%);
+  --shadow-color: 271, 100%, 52%;
+}
+
+.color-card.electric-purple {
+  --card-accent: hsl(285, 100%, 51%);
+  --shadow-color: 285, 100%, 51%;
+}
+
+.color-card.veronica {
+  --card-accent: hsl(271, 100%, 58%);
+  --shadow-color: 271, 100%, 58%;
+}
+
+.color-card.honolulu-blue {
+  --card-accent: hsl(203, 100%, 38%);
+  --shadow-color: 203, 100%, 38%;
+}
+
+.color-card.blue-crayola {
+  --card-accent: hsl(212, 100%, 50%);
+  --shadow-color: 212, 100%, 50%;
+}
+
+.color-card.raspberry {
+  --card-accent: hsl(341, 83%, 51%);
+  --shadow-color: 341, 83%, 51%;
+}
+
+.color-card.mint {
+  --card-accent: hsl(165, 73%, 44%);
+  --shadow-color: 165, 73%, 44%;
+}
+
+.color-card.gold {
+  --card-accent: hsl(50, 100%, 50%);
+  --shadow-color: 50, 100%, 50%;
+}
+
+.color-card.jasmine {
+  --card-accent: hsl(50, 100%, 76%);
+  --shadow-color: 50, 100%, 76%;
+}
+
+.color-card.citrine {
+  --card-accent: hsl(50, 80%, 53%);
+  --shadow-color: 50, 80%, 53%;
+}
+
+.color-card.gold-metallic {
+  --card-accent: hsl(49, 88%, 46%);
+  --shadow-color: 49, 88%, 46%;
+}
+
+.color-card.screamin-green {
+  --card-accent: hsl(104, 100%, 76%);
+  --shadow-color: 104, 100%, 76%;
+}
+
+.color-card.lime-green {
+  --card-accent: hsl(122, 93%, 41%);
+  --shadow-color: 122, 93%, 41%;
+}
+
+.color-card.harlequin {
+  --card-accent: hsl(102, 100%, 50%);
+  --shadow-color: 102, 100%, 50%;
+}
+
+.color-card.sgbus-green {
+  --card-accent: hsl(117, 81%, 56%);
+  --shadow-color: 117, 81%, 56%;
+}
+
+.color-card.orchid {
+  --card-accent: hsl(302, 59%, 65%);
+  --shadow-color: 302, 59%, 65%;
+}
+
+.color-card.neon-blue {
+  --card-accent: hsl(217, 100%, 50%);
+  --shadow-color: 217, 100%, 50%;
+}
+
+.color-card.risd-blue {
+  --card-accent: hsl(222, 100%, 50%);
+  --shadow-color: 222, 100%, 50%;
+}
+
+.color-card.crimson-king {
+  --card-accent: hsl(348, 83%, 47%);
+  --shadow-color: 348, 83%, 47%;
+}
+
+.color-card.canary {
+  --card-accent: hsl(55, 100%, 50%);
+  --shadow-color: 55, 100%, 50%;
+}
+
+.color-card.kelly-green {
+  --card-accent: hsl(122, 84%, 38%);
+  --shadow-color: 122, 84%, 38%;
+}
