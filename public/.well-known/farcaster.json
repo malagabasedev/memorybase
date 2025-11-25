@@ -10,24 +10,24 @@
     "miniapp": {
       "version": "1",
       "name": "Memory",
-      "imageUrl": "https://memory-game-taupe-ten.vercel.app/favicon.png",
-      "homeUrl": "https://memory-game-taupe-ten.vercel.app",
-      "iconUrl": "https://memory-game-taupe-ten.vercel.app/favicon.png",
-      "splashImageUrl": "https://memory-game-taupe-ten.vercel.app/favicon.png",
+      "imageUrl": "https://memorybase.vercel.app/favicon.png",
+      "homeUrl": "https://memorybase.vercel.app",
+      "iconUrl": "https://memorybase.vercel.app/favicon.png",
+      "splashImageUrl": "https://memorybase.vercel.app/favicon.png",
       "splashBackgroundColor": "#000000",
-      "webhookUrl": "https://ex.co/api/webhook",
+      "webhookUrl": "https://memorybase.vercel.app",
       "subtitle": "Play with base",
       "description": "Play with base.",
       "screenshotUrls": [
-        "https://memory-game-taupe-ten.vercel.app/favicon.png"
+        "https://memorybase.vercel.app/favicon.png"
       ],
       "primaryCategory": "social",
       "tags": ["miniapp", "baseapp"],
-      "heroImageUrl": "https://memory-game-taupe-ten.vercel.app/favicon.png",
+      "heroImageUrl": "https://memorybase.vercel.app/favicon.png",
       "tagline": "Play instantly",
       "ogTitle": "Memory",
       "ogDescription": "Play with base.",
-      "ogImageUrl": "https://memory-game-taupe-ten.vercel.app/favicon.png",
+      "ogImageUrl": "https://memorybase.vercel.app/favicon.png",
       "noindex": true
     }
   }
