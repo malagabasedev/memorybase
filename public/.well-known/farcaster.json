@@ -1,8 +1,8 @@
 {
-    "accountAssociation": {
-    "header": "eyJmaWQiOjE1MjUxOTIsInR5cGUiOiJhdXRoIiwia2V5IjoiMHgzMTlGQURlMDUwNDI5OWY0QWNmOTQ0ODUzMjdBQWI3MkE1OWM0NGE5In0",
-    "payload": "eyJkb21haW4iOiJtZW1vcnktZ2FtZS10YXVwZS10ZW4udmVyY2VsLmFwcCJ9",
-    "signature": "Xf4oLAr7www8a8qsUJDEklnZ4kyDP8w8Fqc8sg3Efu4TbC+mu/i9GOr8SYo3yfAHZV7icWDxSXVNiPdiduMn1hs="
+   "accountAssociation": {
+    "header": "eyJmaWQiOjE1MjUxOTIsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHg1MjFiMjgwRGMyRmQ5OTA2NzkyYTFDMWFENEQzMTE4NTFBZjZENjY3In0",
+    "payload": "eyJkb21haW4iOiJtZW1vcnliYXNlLnZlcmNlbC5hcHAifQ",
+    "signature": "E8u9Z/VxkhpOUtvw2s/yfnE91OadB1zAx5WMUOfoWdVLth+RFup+uukgImZRnKzcYWvl4qOyhuTEVf41wyoiSxw="
   },
     "baseBuilder": {
       "ownerAddress": ""
