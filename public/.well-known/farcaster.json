@@ -5,7 +5,7 @@
     "signature": "E8u9Z/VxkhpOUtvw2s/yfnE91OadB1zAx5WMUOfoWdVLth+RFup+uukgImZRnKzcYWvl4qOyhuTEVf41wyoiSxw="
   },
     "baseBuilder": {
-      "ownerAddress": ""
+      "ownerAddress": "0xB873DB49358eB5B41aB5b8539b31C3f41267E5E6"
     },
     "miniapp": {
       "version": "1",
@@ -17,7 +17,7 @@
       "splashBackgroundColor": "#000000",
       "webhookUrl": "https://memorybase.vercel.app",
       "subtitle": "Play with base",
-      "description": "Play with base.",
+      "description": "Memory Color Game is a fast-paced brain-training challenge where players watch a sequence of colors and try to repeat it correctly as it grows longer and faster. Test your focus, sharpen your memory, and see how far you can go!",
       "screenshotUrls": [
         "https://memorybase.vercel.app/favicon.png"
       ],
@@ -26,7 +26,7 @@
       "heroImageUrl": "https://memorybase.vercel.app/favicon.png",
       "tagline": "Play instantly",
       "ogTitle": "Memory",
-      "ogDescription": "Play with base.",
+      "ogDescription": "Memory Color Game is a fast-paced brain-training challenge where players watch a sequence of colors and try to repeat it correctly as it grows longer and faster. Test your focus, sharpen your memory, and see how far you can go!",
       "ogImageUrl": "https://memorybase.vercel.app/favicon.png",
       "noindex": true
     }
